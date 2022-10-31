@@ -18,7 +18,7 @@ public class Console {
     //create storage for digits, operator, and operator storage//
     static String s1 = "", s2 = "", result = "", storage = "";
     static String operator = "", operatorTemp = "", OS = "", OTS = "";
-    static Double ans;
+    static double ans = 0.0;
 
     public static void print(String output, Object... args) {
         System.out.printf(output, args);
@@ -31,13 +31,13 @@ public class Console {
         println(prompt);
         String userInput = scanner.nextLine();
         return userInput;
-
-    } public static Integer getIntegerInput(String prompt) {
+    }
+    public static Integer getIntegerInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
         int userInput = scanner.nextInt();
         return userInput;
-        }
+    }
 
     public static int getDoubleInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
@@ -45,32 +45,67 @@ public class Console {
         double userInput = scanner.nextDouble();
         return (int) userInput;
     }
-
     public static double getStringInput() {
         Scanner scanner = new Scanner(System.in);
         double stringInput = scanner.nextDouble();
         return (double) stringInput;
-
     }
 
-    public static MathContext getLn() {
-        return getLn();
+    public static double getLn() {
+        double x = getDoubleInput("Enter your x");
+        ans = 1-Math.log(x);
+        return ans;
+    }
+    public static double log() {
+        double x = getDoubleInput("Enter your x");
+        ans = Math.log(x);
+        return ans;
+    }
+    public static double exponent() {
+        int x = getIntegerInput("Enter your x");
+        for (int i = 0; i < x; i++) {
+            x = x * x;
+        }
+        return ans = Double.valueOf(x);
+    }
+    public static int factorial() {
+        int ans = getIntegerInput("Enter your x");
+        for (int i = ans; i > 1; i--) {
+            ans*=(i-1);
+        }
+        return ans;
+    }
+    public static double sin() {
+        int x = getIntegerInput("Enter your x");
+        s2 = String.format(String.valueOf(Math.sin(x)), 8, RoundingMode.HALF_EVEN);
+        return ans = Double.valueOf(s2);
+    }
+    public static double cos() {
+        int x = getIntegerInput("Enter your x");
+        s2 = String.format(String.valueOf(Math.cos(x)), 8, RoundingMode.HALF_EVEN);
+        return ans = Double.valueOf(s2);
+    }
+    public static double tan() {
+        int x = getIntegerInput("Enter your x");
+        s2 = String.format(String.valueOf(Math.tan(x)), 8, RoundingMode.HALF_EVEN);
+        return ans = Double.valueOf(s2);
+    }
+    public static double isin() {
+        int x = getIntegerInput("Enter your x");
+        s2 = String.format(String.valueOf(1/Math.sin(x)), 8, RoundingMode.HALF_EVEN);
+        return ans = Double.valueOf(s2);
+    }
+    public static double icos() {
+        int x = getIntegerInput("Enter your x");
+        s2 = String.format(String.valueOf(1/Math.cos(x)), 8, RoundingMode.HALF_EVEN);
+        return ans = Double.valueOf(s2);
+    }
+    public static double itan() {
+        int x = getIntegerInput("Enter your x");
+        s2 = String.format(String.valueOf(1/Math.tan(x)), 8, RoundingMode.HALF_EVEN);
+        return ans = Double.valueOf(s2);
     }
 
-    public static BigInteger factorial () {
-        return factorial();
-    public static Integer getIntegerInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        Integer userInput = scanner.nextInt();
-        return userInput;
-    }
-    public static Double getDoubleInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
-        println(prompt);
-        Double userInput = scanner.nextDouble();
-        return userInput;
-    }
     public static double powerOf() {
         double x = getDoubleInput("Enter your x");
         double y = getDoubleInput("Enter your y");
