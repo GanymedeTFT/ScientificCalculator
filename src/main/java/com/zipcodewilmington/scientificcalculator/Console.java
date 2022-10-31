@@ -1,5 +1,8 @@
 package com.zipcodewilmington.scientificcalculator;
 
+
+import java.math.BigInteger;
+import java.math.MathContext;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Scanner;
@@ -28,7 +31,34 @@ public class Console {
         println(prompt);
         String userInput = scanner.nextLine();
         return userInput;
+
+    } public static Integer getIntegerInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        int userInput = scanner.nextInt();
+        return userInput;
+        }
+
+    public static int getDoubleInput(String prompt) {
+        Scanner scanner = new Scanner(System.in);
+        println(prompt);
+        double userInput = scanner.nextDouble();
+        return (int) userInput;
     }
+
+    public static double getStringInput() {
+        Scanner scanner = new Scanner(System.in);
+        double stringInput = scanner.nextDouble();
+        return (double) stringInput;
+
+    }
+
+    public static MathContext getLn() {
+        return getLn();
+    }
+
+    public static BigInteger factorial () {
+        return factorial();
     public static Integer getIntegerInput(String prompt) {
         Scanner scanner = new Scanner(System.in);
         println(prompt);
@@ -187,5 +217,7 @@ public class Console {
             int temp3 = Integer.parseInt(result)/100;
         }
         return null;
+
     }
+
 }
