@@ -18,25 +18,6 @@ public class MainApplication extends Console {
     static double x;
     static double y;
     public static void main(String[] args) {
-
-        Console.println("The user input %s as a string", s);
-        Console.println("The user input %s as a integer", i);
-        Console.println("The user input %s as a d", d);
-
-    }
-
-
-        Console.println("Welcome to my calculator!");
-        double num1, num2;
-        Scanner scan = new Scanner (System.in);
-        num1 = Console.getDoubleInput("Enter the first number");
-        String operator = Console.getStringInput("Enter the operator (+)");
-        num2 = Console.getDoubleInput("Enter the second number");
-        double answer = mathOps.addition(num1, num2);
-        Console.println("The answer is " + answer);
-    }
-}
-
         println("Welcome to TFT calculator!\n");
         println("| %-10s | %-10s | %-10s |", "1. Math", "2. Percent", "3. x^y");
         println("| %-10s | %-10s | %-10s |", "4. Sin", "5. Cos", "6. Tan");
@@ -49,18 +30,66 @@ public class MainApplication extends Console {
 
         switch (options) {
             case "1":
+                println("Calculation");
                 calculation();
                 break;
             case "3":
+                println("powerOf");
                 powerOf();
+                println("answer is %s", ans);
                 break;
-//          case "4":
-//                    inverseSin();
-//                    break;
+            case "4":
+                println("sin");
+                sin();
+                println("answer is %s", ans);
+                break;
+            case "5":
+                println("cos");
+                cos();
+                println("answer is %s", ans);
+                break;
+            case "6":
+                println("tan");
+                tan();
+                println("answer is %s", ans);
+                break;
+            case "7":
+                println("inverse sin");
+                isin();
+                println("answer is %s", ans);
+                break;
+            case "8":
+                println("inverse cos");
+                icos();
+                println("answer is %s", ans);
+                break;
+            case "9":
+                println("inverse tan");
+                itan();
+                println("answer is %s", ans);
+                break;
+            case "10":
+                println("log");
+                log();
+                println("answer is %s", ans);
+                break;
+            case "11":
+                println("10^x");
+                exponent();
+                println("answer is %s", ans);
+                break;
+            case "12":
+                println("ln");
+                getLn();
+                println("answer is %s", ans);
+                break;
+            case "14":
+                println("n!");
+                factorial();
+                println("answer is %s", ans);
+                break;
             case "16":
 //                drawTriangle();
-
-
-            }
         }
     }
+}
