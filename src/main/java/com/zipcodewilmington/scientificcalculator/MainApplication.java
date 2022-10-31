@@ -1,17 +1,13 @@
 package com.zipcodewilmington.scientificcalculator;
 
 
+import java.util.Scanner;
 import java.util.Objects;
 import java.util.Scanner;
-
 import static java.lang.System.*;
-
 import java.math.BigDecimal;
-
 import static com.zipcodewilmington.scientificcalculator.Calculation.*;
 import static com.zipcodewilmington.scientificcalculator.Console.*;
-
-
 /**
  * Created by leon on 2/9/18.
  */
@@ -23,6 +19,13 @@ public class MainApplication extends Console {
     static double y;
     public static void main(String[] args) {
 
+        Console.println("The user input %s as a string", s);
+        Console.println("The user input %s as a integer", i);
+        Console.println("The user input %s as a d", d);
+
+    }
+
+
         Console.println("Welcome to my calculator!");
         double num1, num2;
         Scanner scan = new Scanner (System.in);
@@ -32,8 +35,6 @@ public class MainApplication extends Console {
         double answer = mathOps.addition(num1, num2);
         Console.println("The answer is " + answer);
     }
-
-    
 }
 
         println("Welcome to TFT calculator!\n");

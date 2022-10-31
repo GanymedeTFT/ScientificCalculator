@@ -14,6 +14,9 @@ import com.zipcodewilmington.scientificcalculator.MainApplication;
  */
 public class TestMainApplication {
 
+}
+
+
 
     @Test
     public void additionTest(){
